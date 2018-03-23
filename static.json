@@ -1,0 +1,13 @@
+{
+  "https_only": true,
+  "redirects": {
+    "test-redirect.fragforce.org": {
+      "url": "https://fragforce.org/donate",
+      "status": 302
+    },
+    "team.fragforce.org": {
+      "url": "https://www.extra-life.org/index.cfm?fuseaction=donorDrive.team&teamID=38642",
+      "status": 302
+    }
+  }
+}
