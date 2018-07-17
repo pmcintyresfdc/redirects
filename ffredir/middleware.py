@@ -4,6 +4,9 @@ from django.contrib.sites.models import Site
 
 
 class SetDynamicSites(object):
+    def __init__(self, get_response):
+        self.get_response = get_response
+
     def process_request(self, request):
         try:
             bits = urllib.urlsplit(request.META['HTTP_HOST'])[0].split('.')
