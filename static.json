@@ -1,5 +1,9 @@
 {
   "https_only": true,
+  "logging": {
+    "access": true,
+    "error": "warn"
+  },
   "redirects": {
     "https://test-redirect.fragforce.org/": {
       "url": "https://fragforce.org/donate",
