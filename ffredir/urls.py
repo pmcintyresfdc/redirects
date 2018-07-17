@@ -16,9 +16,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-import ffredir.urls
 
 urlpatterns = [
-    path('', ffredir.urls),
-    path('admin/', admin.site.urls),
+    path('', 'ffredir.views.idx'),
 ]
