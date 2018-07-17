@@ -15,10 +15,10 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 import ffredir.urls
 
 urlpatterns = [
-    path('', ffredir.urls),
+    path('', include(ffredir.urls)),
     path('admin/', admin.site.urls),
 ]
