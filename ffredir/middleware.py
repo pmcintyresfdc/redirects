@@ -7,6 +7,7 @@ from django.contrib.redirects.middleware import RedirectFallbackMiddleware
 
 class RedirectTempFallbackMiddleware(RedirectFallbackMiddleware):
     response_redirect_class = HttpResponseRedirect
+    response_gone_class = HttpResponseRedirect
 
 class SetDynamicSites(object):
     def __init__(self, get_response):
