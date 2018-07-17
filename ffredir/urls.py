@@ -19,5 +19,5 @@ from django.urls import path
 from ffredir.views import *
 
 urlpatterns = [
-    path('', idx),
+    # path('', idx),
 ]
