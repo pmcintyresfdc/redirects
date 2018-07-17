@@ -8,12 +8,14 @@ class SetDynamicSites(object):
         self.get_response = get_response
 
     def __call__(self, request):
+        print(repr(request.META))
+
         try:
             bits = urllib.urlsplit(request.META['HTTP_HOST'])[0].split('.')
             bits = request.META.get('HTTP_HOST', '').split('.')
             domainname = request.META['HTTP_HOST'].split(':')
             current_site = Site.objects.get(domain=domainname[0])
             settings.SITE_ID._set(current_site.id)
-        except:
+        except Exception as e:
             settings.SITE_ID._set(1)
         return self.get_response(request)
