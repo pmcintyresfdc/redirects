@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ffredir.views import *
+import django.views.defaults
 
 urlpatterns = [
-    # path('', idx),
+    path('404', django.views.defaults.page_not_found),
 ]
