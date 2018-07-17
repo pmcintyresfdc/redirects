@@ -7,7 +7,7 @@ class SetDynamicSites(object):
     def __init__(self, get_response):
         self.get_response = get_response
 
-    def process_request(self, request):
+    def __call__(self, request):
         try:
             bits = urllib.urlsplit(request.META['HTTP_HOST'])[0].split('.')
             bits = request.META.get('HTTP_HOST', '').split('.')
