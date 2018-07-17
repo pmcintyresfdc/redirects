@@ -8,7 +8,7 @@ class SetDynamicSites(object):
         self.get_response = get_response
 
     def __call__(self, request):
-        print(repr(request.META))
+        # print(repr(request.META))
 
         try:
             domainname = request.META['HTTP_HOST'].split(':')
