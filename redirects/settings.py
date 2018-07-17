@@ -51,7 +51,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'ffredir.middleware.SetDynamicSites',
-    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
+    'ffredir.middleware.RedirectTempFallbackMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

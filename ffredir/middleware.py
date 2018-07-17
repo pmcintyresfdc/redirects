@@ -1,7 +1,12 @@
 from django.conf import settings
 import urllib
 from django.contrib.sites.models import Site
+from django.http import HttpResponseRedirect
+from django.contrib.redirects.middleware import RedirectFallbackMiddleware
 
+
+class RedirectTempFallbackMiddleware(RedirectFallbackMiddleware):
+    response_redirect_class = HttpResponseRedirect
 
 class SetDynamicSites(object):
     def __init__(self, get_response):
