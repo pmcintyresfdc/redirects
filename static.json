@@ -1,7 +1,7 @@
 {
   "https_only": true,
   "redirects": {
-    "https://test-redirect.fragforce.org": {
+    "https://test-redirect.fragforce.org/": {
       "url": "https://fragforce.org/donate",
       "status": 302
     },
