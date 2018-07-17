@@ -77,6 +77,7 @@ TEMPLATES = [
         },
     },
 ]
+USE_X_FORWARDED_HOST = True
 
 WSGI_APPLICATION = 'redirects.wsgi.application'
 
