@@ -16,4 +16,4 @@ class SetDynamicSites(object):
             settings.SITE_ID._set(current_site.id)
         except:
             settings.SITE_ID._set(1)
-        return None
+        return self.get_response(request)
