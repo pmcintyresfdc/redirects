@@ -9,6 +9,7 @@ class RedirectTempFallbackMiddleware(RedirectFallbackMiddleware):
     response_redirect_class = HttpResponseRedirect
     response_gone_class = HttpResponseRedirect
 
+
 class SetDynamicSites(object):
     def __init__(self, get_response):
         self.get_response = get_response
